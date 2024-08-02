@@ -1,17 +1,33 @@
-FROM node:alipine3.18 as build
+# Build Stage
+FROM node:alpine3.18 as build
 
-#Build App
-
+# Set the working directory
 WORKDIR /app
-COPY package.json .
+
+# Copy package.json and install dependencies
+COPY package.json package-lock.json ./
 RUN npm install
+
+# Copy the rest of the application code
 COPY . .
+
+# Build the React application
 RUN npm run build
 
-
-#Serve with Nginx
-
+# Serve Stage
 FROM nginx:1.23-alpine
+
+# Set the working directory for Nginx
 WORKDIR /usr/share/nginx/html
+
+# Remove default Nginx static assets
 RUN rm -rf *
-COPY --from=build /app/dist
+
+# Copy the built assets from the build stage to the Nginx container
+COPY --from=build /app/dist .
+
+# Expose port 80
+EXPOSE 80
+
+# Run Nginx in the foreground
+ENTRYPOINT ["nginx", "-g", "daemon off;"]
