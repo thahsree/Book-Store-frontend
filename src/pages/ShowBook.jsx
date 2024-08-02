@@ -12,7 +12,7 @@ function ShowBook(props) {
     useEffect(()=>{
         setLoading(true);
         axios
-            .get(`https://book-store-mern-server-two.vercel.app/books/${id}`)
+            .get(`http://3.93.65.15:5555/books/${id}`)
             .then((res)=>{
                 setBook(res.data);
                 setLoading(false);

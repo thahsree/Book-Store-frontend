@@ -46,7 +46,7 @@ function EditBook(props) {
         }
         setLoading(true)
         axios
-            .put(`https://book-store-mern-server-two.vercel.app/books/${id}`, data)
+            .put(`http://3.93.65.15:5555/books/${id}`, data)
             .then(() => {
                 setLoading(false);
                 navigate('/');

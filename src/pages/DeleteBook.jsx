@@ -20,7 +20,7 @@ function DeleteBook(props) {
         }
         setLoading(true);
         axios
-            .delete(`https://book-store-mern-server-two.vercel.app/books/${id}`)
+            .delete(`http://3.93.65.15:5555/books/${id}`)
             .then(()=>{
                 setLoading(false);
                
