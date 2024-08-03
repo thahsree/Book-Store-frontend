@@ -28,7 +28,7 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: Pull Image from DockerHub
-        run: docker pull thashree11/thashree11/bookstore-frontend:latest
+        run: docker pull thashree11/bookstore-frontend:latest
 
       - name: Delete Container
         run: docker rm -f frontend-container
