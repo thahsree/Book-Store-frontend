@@ -24,7 +24,7 @@ WORKDIR /usr/share/nginx/html
 RUN rm -rf *
 
 # Copy the built assets from the build stage to the Nginx container
-COPY --from=build /app/build .
+COPY --from=build /app/dist .
 
 # Expose port 80
 EXPOSE 80
