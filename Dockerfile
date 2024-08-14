@@ -9,7 +9,7 @@ COPY package.json package-lock.json ./
 RUN npm install
 
 # Copy the rest of the application code
-COPY . .
+COPY . . 
 
 # Build the React application
 RUN npm run build
