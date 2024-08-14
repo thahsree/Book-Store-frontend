@@ -20,7 +20,7 @@ function CreateBook(props) {
         };
         setLoading(true)
         axios
-            .post(`http://3.93.65.15:5555/books`,data)
+            .post(`http://54.167.122.145:5555/books`,data)
             .then(()=>{
                 setLoading(false);
                 navigate('/')

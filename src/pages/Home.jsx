@@ -15,7 +15,7 @@ function Home(props) {
     useEffect(() => {
         setLoading(true);
         axios
-            .get('http://3.93.65.15:5555/books')
+            .get('http://54.167.122.145:5555/books')
             .then((res) => {
                 setBooks(res.data.data);
                 setLoading(false);

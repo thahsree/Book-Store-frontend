@@ -46,7 +46,7 @@ function EditBook(props) {
         }
         setLoading(true)
         axios
-            .put(`http://3.93.65.15:5555/books/${id}`, data)
+            .put(`http://54.167.122.145:5555/books/${id}`, data)
             .then(() => {
                 setLoading(false);
                 navigate('/');

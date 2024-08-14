@@ -27,7 +27,7 @@ function CreateUser(props) {
 
         if (password === confirmPassword) {
             axios
-                .post(`http://3.93.65.15:5555/users`, data)
+                .post(`http://54.167.122.145:5555/users`, data)
                 .then((res) => {
                     const response = res.data.message
                     if (response) {
