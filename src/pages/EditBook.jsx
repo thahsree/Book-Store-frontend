@@ -18,7 +18,7 @@ function EditBook(props) {
     useEffect(() => {
         setLoading(true);
         axios
-            .get(`https://book-store-mern-server-two.vercel.app/books/${id}`)
+            .get(`http://54.167.122.145:5555/books/${id}`)
             .then((res) => {
                 setAuthor(res.data.author);
                 setTitle(res.data.title);
