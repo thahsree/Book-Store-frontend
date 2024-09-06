@@ -18,7 +18,7 @@ function EditBook(props) {
     useEffect(() => {
         setLoading(true);
         axios
-            .get(`http://54.167.122.145:5555/books/${id}`)
+            .get(`http://3.87.22.48:5555/books/${id}`)
             .then((res) => {
                 setAuthor(res.data.author);
                 setTitle(res.data.title);
@@ -46,7 +46,7 @@ function EditBook(props) {
         }
         setLoading(true)
         axios
-            .put(`http://54.167.122.145:5555/books/${id}`, data)
+            .put(`http://3.87.22.48:5555/books/${id}`, data)
             .then(() => {
                 setLoading(false);
                 navigate('/');

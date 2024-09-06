@@ -20,7 +20,7 @@ function DeleteBook(props) {
         }
         setLoading(true);
         axios
-            .delete(`http://54.167.122.145:5555/books/${id}`)
+            .delete(`http://3.87.22.48:5555/books/${id}`)
             .then(()=>{
                 setLoading(false);
                
